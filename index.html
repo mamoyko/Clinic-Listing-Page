@@ -28,7 +28,8 @@
 	</header>
 	<div class="container">
 		<div class="col-md-12">
-			<div class="main"></div>
+			<div class="main">
+			</div>
 		</div>
 	</div>
 	<script
@@ -36,531 +37,533 @@
 	  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
 	  crossorigin="anonymous"></script>
 	<script>
-		var list_data = [
-			{
-				"name" : "Bangkok International Dental Center (BIDC)",
-				"rating" : "4.5",
-				"location" : {
-					"lat" : 13.772767,
-					"lng" : 100.57311
-				},
-				"isValid" : true,
-				"services_in_clinic" : [
-					"All-on-4",
-					"Porcelain Crown",
-					"Dental Implant (per tooth)",
-					"Full Dentures (Acrylic) per Jaw",
-					"Cavity Filling",
-					"Teeth Whiterning In office ZOOM",
-					"Teeth Whitening Home Bleaching (3 syringes)",
-					"Consultation/Treatment plan",
-					"Check up",
-					"Xray OPG (Panoramic)",
-					"Cleaning",
-					"Dental Bridges",
-					"Porcelain Veneer",
-					"Small Xray",
-					"CT Scan",
-					"Filling - Composite (Tooth Color)",
-					"Ceramic Crown",
-					"Invisalign",
-					"Root Canal Treatment",
-					"Front Tooth",
-					"Normal Tooth Extraction",
-					"Complex Tooth Extraction",
-					"Simple Surgical Removal (molar, tooth root, impacted tooth)",
-					"Complicated Surgical Removal/Embedded tooth removal"
-				]
-			},
-			{
-				"name" : "Smile Signature Siam Square",
-				"rating" : "4.5",
-				"location" : {
-					"lat" : 13.745342,
-					"lng" : 100.531016
-				},
-				"isValid" : true,
-				"services_in_clinic" : [
-					"All-on-4",
-					"Porcelain Crown",
-					"Dental Implant (per tooth)",
-					"Full Dentures (Acrylic) per Jaw",
-					"Teeth Whiterning In office ZOOM",
-					"Teeth Whitening Home Bleaching (3 syringes)",
-					"Check up",
-					"Cleaning",
-					"Porcelain Veneer",
-					"Filling - Composite (Tooth Color)",
-					"Ceramic Crown",
-					"Partial Denture, Acrylic Frame",
-					"Partial Denture, Metal Frame",
-					"Invisalign",
-					"Root Canal Treatment",
-					"Front Tooth",
-					"Pre Molar",
-					"Molar",
-					"Normal Tooth Extraction",
-					"Complex Tooth Extraction",
-					"Simple Surgical Removal (molar, tooth root, impacted tooth)",
-					"Complicated Surgical Removal/Embedded tooth removal"
-				]
-			},
-			{
-				"name" : "Bangkok Smile Dental Clinic Sukhumvit",
-				"rating" : "4.2",
-				"location" : {
-					"lat" : 13.7422855,
-					"lng" : 100.5540202
-				},
-				"isValid" : true,
-				"services_in_clinic" : [
-					"All-on-4",
-					"Porcelain Crown",
-					"Dental Implant (per tooth)",
-					"Full Dentures (Acrylic) per Jaw",
-					"Teeth Whiterning In office ZOOM",
-					"Teeth Whitening Home Bleaching (3 syringes)",
-					"Check up",
-					"Xray OPG (Panoramic)",
-					"Cleaning",
-					"Dental Bridges",
-					"Porcelain Veneer",
-					"Small Xray",
-					"CT Scan",
-					"Filling - Composite (Tooth Color)",
-					"Partial Denture, Acrylic Frame",
-					"Partial Denture, Metal Frame",
-					"Invisalign",
-					"Post and core",
-					"Root Canal Treatment",
-					"Front Tooth",
-					"Pre Molar",
-					"Molar",
-					"Root Planning",
-					"Bone Grafting",
-					"Normal Tooth Extraction"
-				]
-			},
-			{
-				"name" : "Bangkok Smile Dental Clinic (Asoke)",
-				"rating" : "4.2",
-				"location" : {
-					"lat" : 13.732743,
-					"lng" : 100.5253054
-				},
-				"isValid" : true,
-				"services_in_clinic" : [
-					"All-on-4",
-					"Porcelain Crown",
-					"Dental Implant (per tooth)",
-					"Full Dentures (Acrylic) per Jaw",
-					"Cavity Filling",
-					"Teeth Whiterning In office ZOOM",
-					"Teeth Whitening Home Bleaching (3 syringes)",
-					"Consultation/Treatment plan",
-					"Check up",
-					"Xray OPG (Panoramic)",
-					"Cleaning",
-					"Dental Bridges",
-					"Porcelain Veneer",
-					"Invisalign",
-					"Root Canal Treatment"
-				]
-			},
-			{
-				"name" : "Thantakit International Dental Center",
-				"rating" : "4.8",
-				"location" : {
-					"lat" : 13.748014,
-					"lng" : 100.5694483
-				},
-				"isValid" : true,
-				"services_in_clinic" : [
-					"All-on-4",
-					"All-on-5",
-					"All-on-6",
-					"Porcelain Crown",
-					"Dental Implant (per tooth)",
-					"Full Dentures (Acrylic) per Jaw",
-					"Teeth Whiterning In office ZOOM",
-					"Teeth Whitening Home Bleaching (3 syringes)",
-					"Check up",
-					"Xray OPG (Panoramic)",
-					"Cleaning",
-					"Dental Bridges",
-					"Porcelain Veneer",
-					"Small Xray",
-					"CT Scan",
-					"Inlay/onlay",
-					"Inlay/onlay (Metal - Semiprecious)",
-					"Composite Veneer",
-					"Ceramic Crown",
-					"Invisalign",
-					"Implants",
-					"Root Canal Treatment",
-					"Front Tooth",
-					"Pre Molar",
-					"Molar",
-					"Normal Tooth Extraction",
-					"Complex Tooth Extraction",
-					"Simple Surgical Removal (molar, tooth root, impacted tooth)",
-					"Complicated Surgical Removal/Embedded tooth removal"
-				]
-			},
-			{
-				"name" : "Thantakit (All Seasons Place Branch)",
-				"rating" : "4.6",
-				"location" : {
-					"lat" : 13.7437263,
-					"lng" : 100.5422513
-				},
-				"isValid" : true,
-				"services_in_clinic" : [
-					"All-on-4",
-					"All-on-5",
-					"All-on-6",
-					"Porcelain Crown",
-					"Dental Implant (per tooth)",
-					"Full Dentures (Acrylic) per Jaw",
-					"Cavity Filling",
-					"Teeth Whiterning In office ZOOM",
-					"Teeth Whitening Home Bleaching (3 syringes)",
-					"Check up",
-					"Xray OPG (Panoramic)",
-					"Cleaning",
-					"Dental Bridges",
-					"Porcelain Veneer",
-					"Small Xray",
-					"CT Scan",
-					"Inlay/onlay",
-					"Inlay/onlay (Metal - Semiprecious)",
-					"Composite Veneer",
-					"Ceramic Crown",
-					"Invisalign",
-					"Root Canal Treatment",
-					"Front Tooth",
-					"Pre Molar",
-					"Molar",
-					"Normal Tooth Extraction",
-					"Complex Tooth Extraction",
-					"Simple Surgical Removal (molar, tooth root, impacted tooth)",
-					"Complicated Surgical Removal/Embedded tooth removal"
-				]
-			},
-			{
-				"name" : "Dental Signature Siam Paragon",
-				"rating" : "4",
-				"location" : {
-					"lat" : 13.7470029,
-					"lng" : 100.5277285
-				},
-				"isValid" : true,
-				"services_in_clinic" : [
-					"All-on-4",
-					"Porcelain Crown",
-					"Dental Implant (per tooth)",
-					"Full Dentures (Acrylic) per Jaw",
-					"Teeth Whiterning In office ZOOM",
-					"Teeth Whitening Home Bleaching (3 syringes)",
-					"Check up",
-					"Xray OPG (Panoramic)",
-					"Cleaning",
-					"Dental Bridges",
-					"Porcelain Veneer",
-					"Filling - Composite (Tooth Color)",
-					"Invisalign",
-					"Root Canal Treatment"
-				]
-			},
-			{
-				"name" : "Apex Ploenchit",
-				"rating" : "4.2",
-				"location" : {
-					"lat" : 13.7401355,
-					"lng" : 100.5490149
-				},
-				"isValid" : true,
-				"services_in_clinic" : [
-					"All-on-4",
-					"All-on-5",
-					"All-on-6",
-					"Dental Implant (per tooth)",
-					"Full Dentures (Acrylic) per Jaw",
-					"Teeth Whiterning In office ZOOM",
-					"Teeth Whitening Home Bleaching (3 syringes)",
-					"Check up",
-					"Xray OPG (Panoramic)",
-					"Dental Bridges",
-					"Porcelain Veneer",
-					"Small Xray",
-					"Filling - Amalgam",
-					"Filling - Composite (Tooth Color)",
-					"Inlay/onlay",
-					"Composite Veneer",
-					"Ceramic Crown",
-					"Partial Denture, Acrylic Frame",
-					"Partial Denture, Metal Frame",
-					"Post and core",
-					"Root Canal Treatment",
-					"Periodontal Treatment",
-					"Root Planning",
-					"Crown Lengthening",
-					"Normal Tooth Extraction",
-					"Simple Surgical Removal (molar, tooth root, impacted tooth)",
-					"Complicated Surgical Removal/Embedded tooth removal"
-				]
-			},
-			{
-				"name" : "BFC Dental",
-				"rating" : "4.2",
-				"location" : {
-					"lat" : 13.671718,
-					"lng" : 100.6141953
-				},
-				"isValid" : true,
-				"services_in_clinic" : [
-					"All-on-4",
-					"All-on-6",
-					"Dental Implant (per tooth)",
-					"Full Dentures (Acrylic) per Jaw",
-					"Teeth Whiterning In office ZOOM",
-					"Teeth Whitening Home Bleaching (3 syringes)",
-					"Check up",
-					"Xray OPG (Panoramic)",
-					"Dental Bridges",
-					"Porcelain Veneer",
-					"Small Xray",
-					"Filling - Amalgam",
-					"Filling - Composite (Tooth Color)",
-					"Inlay/onlay",
-					"Composite Veneer",
-					"Ceramic Crown",
-					"Post and core",
-					"Root Canal Treatment",
-					"Periodontal Treatment",
-					"Root Planning",
-					"Crown Lengthening",
-					"Normal Tooth Extraction",
-					"Simple Surgical Removal (molar, tooth root, impacted tooth)",
-					"Complicated Surgical Removal/Embedded tooth removal"
-				]
-			},
-			{
-				"name" : "Dr. Smile Dental Clinic",
-				"rating" : "5",
-				"location" : {
-					"lat" : 11.4314818,
-					"lng" : 97.9522851
-				},
-				"isValid" : true,
-				"services_in_clinic" : [
-					"All-on-4",
-					"All-on-6",
-					"Dental Implant (per tooth)",
-					"Full Dentures (Acrylic) per Jaw",
-					"Teeth Whiterning In office ZOOM",
-					"Teeth Whitening Home Bleaching (3 syringes)",
-					"Check up",
-					"Xray OPG (Panoramic)",
-					"Dental Bridges",
-					"Porcelain Veneer",
-					"Small Xray",
-					"Filling - Amalgam",
-					"Filling - Composite (Tooth Color)",
-					"Inlay/onlay",
-					"Composite Veneer",
-					"Ceramic Crown",
-					"Post and core",
-					"Root Canal Treatment",
-					"Periodontal Treatment",
-					"Root Planning",
-					"Crown Lengthening",
-					"Normal Tooth Extraction",
-					"Simple Surgical Removal (molar, tooth root, impacted tooth)",
-					"Complicated Surgical Removal/Embedded tooth removal"
-				]
-			},
-			{
-				"name" : "Dr. Sunil International Dental Center",
-				"rating" : "4.7",
-				"location" : {
-					"lat" : 11.4314818,
-					"lng" : 97.9522851
-				},
-				"isValid" : true,
-				"services_in_clinic" : [
-					"Porcelain Crown",
-					"Dental Implant (per tooth)",
-					"Full Dentures (Acrylic) per Jaw",
-					"Teeth Whiterning In office ZOOM",
-					"Teeth Whitening Home Bleaching (3 syringes)",
-					"Check up",
-					"Xray OPG (Panoramic)",
-					"Cleaning",
-					"Dental Bridges",
-					"Porcelain Veneer",
-					"Filling - Amalgam",
-					"Root Canal Treatment"
-				]
-			},
-			{
-				"name" : "The Arch International Dental Center",
-				"rating" : "4.7",
-				"location" : {
-					"lat" : 13.7357682,
-					"lng" : 100.5606533
-				},
-				"isValid" : true,
-				"services_in_clinic" : [
-					"Porcelain Crown",
-					"Dental Implant",
-					"Full Dentures",
-					"Cleaning",
-					"Porcelain Veneer",
-					"Ceramic Crown",
-					"Partial Denture, Acrylic Frame",
-					"Invisalign",
-					"Post and core",
-					"Root Canal Treatment",
-					"Front Tooth",
-					"Pre Molar",
-					"Molar",
-					"Normal Tooth Extraction",
-					"Simple Surgical Removal (molar, tooth root, impacted tooth)"
-				]
-			},
-			{
-				"name" : "RSU Dental Center",
-				"rating" : "4.7",
-				"location" : {
-					"lat" : 13.7358145,
-					"lng" : 100.5453323
-				},
-				"isValid" : true,
-				"services_in_clinic" : [
-					"Porcelain Crown",
-					"Dental Implant",
-					"Full Dentures (Acrylic) per Jaw",
-					"Teeth Whiterning In office ZOOM",
-					"Teeth Whitening Home Bleaching (3 syringes)",
-					"Check up",
-					"Xray OPG (Panoramic)",
-					"Dental Bridges",
-					"Porcelain Veneer",
-					"Filling - Amalgam",
-					"Filling - Composite (Tooth Color)",
-					"Invisalign",
-					"Mini Implant (per tooth)",
-					"Root Canal Treatment"
-				]
-			},
-			{
-				"name" : "MDK Silom Dental Clinic",
-				"rating" : "4.6",
-				"location" : {
-					"lat" : 13.7279112,
-					"lng" : 100.5338893
-				},
-				"isValid" : true,
-				"services_in_clinic" : [
-					"Porcelain Crown",
-					"Dental Implant (per tooth)",
-					"Teeth Whiterning In office ZOOM",
-					"Check up",
-					"Xray OPG (Panoramic)",
-					"Cleaning",
-					"Small Xray",
-					"CT Scan",
-					"Filling - Amalgam",
-					"Composite Veneer",
-					"Root Canal Treatment",
-					"Normal Tooth Extraction",
-					"Complex Tooth Extraction",
-					"Simple Surgical Removal (molar, tooth root, impacted tooth)",
-					"Complicated Surgical Removal/Embedded tooth removal"
-				]
-			},
-			{
-				"name" : "Promjai",
-				"rating" : "4.2",
-				"location" : {
-					"lat" : 13.7314866,
-					"lng" : 100.5722726
-				},
-				"isValid" : true,
-				"services_in_clinic" : [
-					"Porcelain Crown",
-					"Dental Implant (per tooth)",
-					"Full Dentures (Acrylic) per Jaw",
-					"Teeth Whiterning In office ZOOM",
-					"Check up",
-					"Xray OPG (Panoramic)",
-					"Cleaning",
-					"Dental Bridges",
-					"Small Xray",
-					"Filling - Amalgam",
-					"Filling - Composite (Tooth Color)",
-					"Inlay/onlay",
-					"Inlay/onlay (Metal - Semiprecious)",
-					"Ceramic Veneer",
-					"Ceramic Crown",
-					"Partial Denture, Metal Frame",
-					"Post and core",
-					"Root Canal Treatment",
-					"Root Planning",
-					"Normal Tooth Extraction",
-					"Complex Tooth Extraction"
-				]
-			},
-			{
-				"name" : "Habito Dental Clinic",
-				"rating" : "4",
-				"location" : {
-					"lat" : 13.7127883,
-					"lng" : 100.5987251
-				},
-				"isValid" : true,
-				"services_in_clinic" : [
-					"Porcelain Crown",
-					"Dental Implant (per tooth)",
-					"Full Dentures (Acrylic) per Jaw",
-					"Teeth Whiterning In office ZOOM",
-					"Xray OPG (Panoramic)",
-					"Cleaning",
-					"Porcelain Veneer",
-					"Small Xray",
-					"Filling - Amalgam",
-					"Composite Veneer",
-					"Ceramic Crown",
-					"Partial Denture, Acrylic Frame",
-					"Partial Denture, Metal Frame",
-					"Invisalign",
-					"Post and core",
-					"Root Canal Treatment",
-					"Root Planning",
-					"Normal Tooth Extraction",
-					"Simple Surgical Removal (molar, tooth root, impacted tooth)"
-				]
-			}		
-		]
+		
 
 
 		$(function(){
 
+			var list_data = [
+				{
+					"name" : "Bangkok International Dental Center (BIDC)",
+					"rating" : "4.5",
+					"location" : {
+						"lat" : 13.772767,
+						"lng" : 100.57311
+					},
+					"isValid" : true,
+					"services_in_clinic" : [
+						"All-on-4",
+						"Porcelain Crown",
+						"Dental Implant (per tooth)",
+						"Full Dentures (Acrylic) per Jaw",
+						"Cavity Filling",
+						"Teeth Whiterning In office ZOOM",
+						"Teeth Whitening Home Bleaching (3 syringes)",
+						"Consultation/Treatment plan",
+						"Check up",
+						"Xray OPG (Panoramic)",
+						"Cleaning",
+						"Dental Bridges",
+						"Porcelain Veneer",
+						"Small Xray",
+						"CT Scan",
+						"Filling - Composite (Tooth Color)",
+						"Ceramic Crown",
+						"Invisalign",
+						"Root Canal Treatment",
+						"Front Tooth",
+						"Normal Tooth Extraction",
+						"Complex Tooth Extraction",
+						"Simple Surgical Removal (molar, tooth root, impacted tooth)",
+						"Complicated Surgical Removal/Embedded tooth removal"
+					]
+				},
+				{
+					"name" : "Smile Signature Siam Square",
+					"rating" : "4.5",
+					"location" : {
+						"lat" : 13.745342,
+						"lng" : 100.531016
+					},
+					"isValid" : true,
+					"services_in_clinic" : [
+						"All-on-4",
+						"Porcelain Crown",
+						"Dental Implant (per tooth)",
+						"Full Dentures (Acrylic) per Jaw",
+						"Teeth Whiterning In office ZOOM",
+						"Teeth Whitening Home Bleaching (3 syringes)",
+						"Check up",
+						"Cleaning",
+						"Porcelain Veneer",
+						"Filling - Composite (Tooth Color)",
+						"Ceramic Crown",
+						"Partial Denture, Acrylic Frame",
+						"Partial Denture, Metal Frame",
+						"Invisalign",
+						"Root Canal Treatment",
+						"Front Tooth",
+						"Pre Molar",
+						"Molar",
+						"Normal Tooth Extraction",
+						"Complex Tooth Extraction",
+						"Simple Surgical Removal (molar, tooth root, impacted tooth)",
+						"Complicated Surgical Removal/Embedded tooth removal"
+					]
+				},
+				{
+					"name" : "Bangkok Smile Dental Clinic Sukhumvit",
+					"rating" : "4.2",
+					"location" : {
+						"lat" : 13.7422855,
+						"lng" : 100.5540202
+					},
+					"isValid" : true,
+					"services_in_clinic" : [
+						"All-on-4",
+						"Porcelain Crown",
+						"Dental Implant (per tooth)",
+						"Full Dentures (Acrylic) per Jaw",
+						"Teeth Whiterning In office ZOOM",
+						"Teeth Whitening Home Bleaching (3 syringes)",
+						"Check up",
+						"Xray OPG (Panoramic)",
+						"Cleaning",
+						"Dental Bridges",
+						"Porcelain Veneer",
+						"Small Xray",
+						"CT Scan",
+						"Filling - Composite (Tooth Color)",
+						"Partial Denture, Acrylic Frame",
+						"Partial Denture, Metal Frame",
+						"Invisalign",
+						"Post and core",
+						"Root Canal Treatment",
+						"Front Tooth",
+						"Pre Molar",
+						"Molar",
+						"Root Planning",
+						"Bone Grafting",
+						"Normal Tooth Extraction"
+					]
+				},
+				{
+					"name" : "Bangkok Smile Dental Clinic (Asoke)",
+					"rating" : "4.2",
+					"location" : {
+						"lat" : 13.732743,
+						"lng" : 100.5253054
+					},
+					"isValid" : true,
+					"services_in_clinic" : [
+						"All-on-4",
+						"Porcelain Crown",
+						"Dental Implant (per tooth)",
+						"Full Dentures (Acrylic) per Jaw",
+						"Cavity Filling",
+						"Teeth Whiterning In office ZOOM",
+						"Teeth Whitening Home Bleaching (3 syringes)",
+						"Consultation/Treatment plan",
+						"Check up",
+						"Xray OPG (Panoramic)",
+						"Cleaning",
+						"Dental Bridges",
+						"Porcelain Veneer",
+						"Invisalign",
+						"Root Canal Treatment"
+					]
+				},
+				{
+					"name" : "Thantakit International Dental Center",
+					"rating" : "4.8",
+					"location" : {
+						"lat" : 13.748014,
+						"lng" : 100.5694483
+					},
+					"isValid" : true,
+					"services_in_clinic" : [
+						"All-on-4",
+						"All-on-5",
+						"All-on-6",
+						"Porcelain Crown",
+						"Dental Implant (per tooth)",
+						"Full Dentures (Acrylic) per Jaw",
+						"Teeth Whiterning In office ZOOM",
+						"Teeth Whitening Home Bleaching (3 syringes)",
+						"Check up",
+						"Xray OPG (Panoramic)",
+						"Cleaning",
+						"Dental Bridges",
+						"Porcelain Veneer",
+						"Small Xray",
+						"CT Scan",
+						"Inlay/onlay",
+						"Inlay/onlay (Metal - Semiprecious)",
+						"Composite Veneer",
+						"Ceramic Crown",
+						"Invisalign",
+						"Implants",
+						"Root Canal Treatment",
+						"Front Tooth",
+						"Pre Molar",
+						"Molar",
+						"Normal Tooth Extraction",
+						"Complex Tooth Extraction",
+						"Simple Surgical Removal (molar, tooth root, impacted tooth)",
+						"Complicated Surgical Removal/Embedded tooth removal"
+					]
+				},
+				{
+					"name" : "Thantakit (All Seasons Place Branch)",
+					"rating" : "4.6",
+					"location" : {
+						"lat" : 13.7437263,
+						"lng" : 100.5422513
+					},
+					"isValid" : true,
+					"services_in_clinic" : [
+						"All-on-4",
+						"All-on-5",
+						"All-on-6",
+						"Porcelain Crown",
+						"Dental Implant (per tooth)",
+						"Full Dentures (Acrylic) per Jaw",
+						"Cavity Filling",
+						"Teeth Whiterning In office ZOOM",
+						"Teeth Whitening Home Bleaching (3 syringes)",
+						"Check up",
+						"Xray OPG (Panoramic)",
+						"Cleaning",
+						"Dental Bridges",
+						"Porcelain Veneer",
+						"Small Xray",
+						"CT Scan",
+						"Inlay/onlay",
+						"Inlay/onlay (Metal - Semiprecious)",
+						"Composite Veneer",
+						"Ceramic Crown",
+						"Invisalign",
+						"Root Canal Treatment",
+						"Front Tooth",
+						"Pre Molar",
+						"Molar",
+						"Normal Tooth Extraction",
+						"Complex Tooth Extraction",
+						"Simple Surgical Removal (molar, tooth root, impacted tooth)",
+						"Complicated Surgical Removal/Embedded tooth removal"
+					]
+				},
+				{
+					"name" : "Dental Signature Siam Paragon",
+					"rating" : "4",
+					"location" : {
+						"lat" : 13.7470029,
+						"lng" : 100.5277285
+					},
+					"isValid" : true,
+					"services_in_clinic" : [
+						"All-on-4",
+						"Porcelain Crown",
+						"Dental Implant (per tooth)",
+						"Full Dentures (Acrylic) per Jaw",
+						"Teeth Whiterning In office ZOOM",
+						"Teeth Whitening Home Bleaching (3 syringes)",
+						"Check up",
+						"Xray OPG (Panoramic)",
+						"Cleaning",
+						"Dental Bridges",
+						"Porcelain Veneer",
+						"Filling - Composite (Tooth Color)",
+						"Invisalign",
+						"Root Canal Treatment"
+					]
+				},
+				{
+					"name" : "Apex Ploenchit",
+					"rating" : "4.2",
+					"location" : {
+						"lat" : 13.7401355,
+						"lng" : 100.5490149
+					},
+					"isValid" : true,
+					"services_in_clinic" : [
+						"All-on-4",
+						"All-on-5",
+						"All-on-6",
+						"Dental Implant (per tooth)",
+						"Full Dentures (Acrylic) per Jaw",
+						"Teeth Whiterning In office ZOOM",
+						"Teeth Whitening Home Bleaching (3 syringes)",
+						"Check up",
+						"Xray OPG (Panoramic)",
+						"Dental Bridges",
+						"Porcelain Veneer",
+						"Small Xray",
+						"Filling - Amalgam",
+						"Filling - Composite (Tooth Color)",
+						"Inlay/onlay",
+						"Composite Veneer",
+						"Ceramic Crown",
+						"Partial Denture, Acrylic Frame",
+						"Partial Denture, Metal Frame",
+						"Post and core",
+						"Root Canal Treatment",
+						"Periodontal Treatment",
+						"Root Planning",
+						"Crown Lengthening",
+						"Normal Tooth Extraction",
+						"Simple Surgical Removal (molar, tooth root, impacted tooth)",
+						"Complicated Surgical Removal/Embedded tooth removal"
+					]
+				},
+				{
+					"name" : "BFC Dental",
+					"rating" : "4.2",
+					"location" : {
+						"lat" : 13.671718,
+						"lng" : 100.6141953
+					},
+					"isValid" : true,
+					"services_in_clinic" : [
+						"All-on-4",
+						"All-on-6",
+						"Dental Implant (per tooth)",
+						"Full Dentures (Acrylic) per Jaw",
+						"Teeth Whiterning In office ZOOM",
+						"Teeth Whitening Home Bleaching (3 syringes)",
+						"Check up",
+						"Xray OPG (Panoramic)",
+						"Dental Bridges",
+						"Porcelain Veneer",
+						"Small Xray",
+						"Filling - Amalgam",
+						"Filling - Composite (Tooth Color)",
+						"Inlay/onlay",
+						"Composite Veneer",
+						"Ceramic Crown",
+						"Post and core",
+						"Root Canal Treatment",
+						"Periodontal Treatment",
+						"Root Planning",
+						"Crown Lengthening",
+						"Normal Tooth Extraction",
+						"Simple Surgical Removal (molar, tooth root, impacted tooth)",
+						"Complicated Surgical Removal/Embedded tooth removal"
+					]
+				},
+				{
+					"name" : "Dr. Smile Dental Clinic",
+					"rating" : "5",
+					"location" : {
+						"lat" : 11.4314818,
+						"lng" : 97.9522851
+					},
+					"isValid" : true,
+					"services_in_clinic" : [
+						"All-on-4",
+						"All-on-6",
+						"Dental Implant (per tooth)",
+						"Full Dentures (Acrylic) per Jaw",
+						"Teeth Whiterning In office ZOOM",
+						"Teeth Whitening Home Bleaching (3 syringes)",
+						"Check up",
+						"Xray OPG (Panoramic)",
+						"Dental Bridges",
+						"Porcelain Veneer",
+						"Small Xray",
+						"Filling - Amalgam",
+						"Filling - Composite (Tooth Color)",
+						"Inlay/onlay",
+						"Composite Veneer",
+						"Ceramic Crown",
+						"Post and core",
+						"Root Canal Treatment",
+						"Periodontal Treatment",
+						"Root Planning",
+						"Crown Lengthening",
+						"Normal Tooth Extraction",
+						"Simple Surgical Removal (molar, tooth root, impacted tooth)",
+						"Complicated Surgical Removal/Embedded tooth removal"
+					]
+				},
+				{
+					"name" : "Dr. Sunil International Dental Center",
+					"rating" : "4.7",
+					"location" : {
+						"lat" : 11.4314818,
+						"lng" : 97.9522851
+					},
+					"isValid" : true,
+					"services_in_clinic" : [
+						"Porcelain Crown",
+						"Dental Implant (per tooth)",
+						"Full Dentures (Acrylic) per Jaw",
+						"Teeth Whiterning In office ZOOM",
+						"Teeth Whitening Home Bleaching (3 syringes)",
+						"Check up",
+						"Xray OPG (Panoramic)",
+						"Cleaning",
+						"Dental Bridges",
+						"Porcelain Veneer",
+						"Filling - Amalgam",
+						"Root Canal Treatment"
+					]
+				},
+				{
+					"name" : "The Arch International Dental Center",
+					"rating" : "4.7",
+					"location" : {
+						"lat" : 13.7357682,
+						"lng" : 100.5606533
+					},
+					"isValid" : true,
+					"services_in_clinic" : [
+						"Porcelain Crown",
+						"Dental Implant",
+						"Full Dentures",
+						"Cleaning",
+						"Porcelain Veneer",
+						"Ceramic Crown",
+						"Partial Denture, Acrylic Frame",
+						"Invisalign",
+						"Post and core",
+						"Root Canal Treatment",
+						"Front Tooth",
+						"Pre Molar",
+						"Molar",
+						"Normal Tooth Extraction",
+						"Simple Surgical Removal (molar, tooth root, impacted tooth)"
+					]
+				},
+				{
+					"name" : "RSU Dental Center",
+					"rating" : "4.7",
+					"location" : {
+						"lat" : 13.7358145,
+						"lng" : 100.5453323
+					},
+					"isValid" : true,
+					"services_in_clinic" : [
+						"Porcelain Crown",
+						"Dental Implant",
+						"Full Dentures (Acrylic) per Jaw",
+						"Teeth Whiterning In office ZOOM",
+						"Teeth Whitening Home Bleaching (3 syringes)",
+						"Check up",
+						"Xray OPG (Panoramic)",
+						"Dental Bridges",
+						"Porcelain Veneer",
+						"Filling - Amalgam",
+						"Filling - Composite (Tooth Color)",
+						"Invisalign",
+						"Mini Implant (per tooth)",
+						"Root Canal Treatment"
+					]
+				},
+				{
+					"name" : "MDK Silom Dental Clinic",
+					"rating" : "4.6",
+					"location" : {
+						"lat" : 13.7279112,
+						"lng" : 100.5338893
+					},
+					"isValid" : true,
+					"services_in_clinic" : [
+						"Porcelain Crown",
+						"Dental Implant (per tooth)",
+						"Teeth Whiterning In office ZOOM",
+						"Check up",
+						"Xray OPG (Panoramic)",
+						"Cleaning",
+						"Small Xray",
+						"CT Scan",
+						"Filling - Amalgam",
+						"Composite Veneer",
+						"Root Canal Treatment",
+						"Normal Tooth Extraction",
+						"Complex Tooth Extraction",
+						"Simple Surgical Removal (molar, tooth root, impacted tooth)",
+						"Complicated Surgical Removal/Embedded tooth removal"
+					]
+				},
+				{
+					"name" : "Promjai",
+					"rating" : "4.2",
+					"location" : {
+						"lat" : 13.7314866,
+						"lng" : 100.5722726
+					},
+					"isValid" : true,
+					"services_in_clinic" : [
+						"Porcelain Crown",
+						"Dental Implant (per tooth)",
+						"Full Dentures (Acrylic) per Jaw",
+						"Teeth Whiterning In office ZOOM",
+						"Check up",
+						"Xray OPG (Panoramic)",
+						"Cleaning",
+						"Dental Bridges",
+						"Small Xray",
+						"Filling - Amalgam",
+						"Filling - Composite (Tooth Color)",
+						"Inlay/onlay",
+						"Inlay/onlay (Metal - Semiprecious)",
+						"Ceramic Veneer",
+						"Ceramic Crown",
+						"Partial Denture, Metal Frame",
+						"Post and core",
+						"Root Canal Treatment",
+						"Root Planning",
+						"Normal Tooth Extraction",
+						"Complex Tooth Extraction"
+					]
+				},
+				{
+					"name" : "Habito Dental Clinic",
+					"rating" : "4",
+					"location" : {
+						"lat" : 13.7127883,
+						"lng" : 100.5987251
+					},
+					"isValid" : true,
+					"services_in_clinic" : [
+						"Porcelain Crown",
+						"Dental Implant (per tooth)",
+						"Full Dentures (Acrylic) per Jaw",
+						"Teeth Whiterning In office ZOOM",
+						"Xray OPG (Panoramic)",
+						"Cleaning",
+						"Porcelain Veneer",
+						"Small Xray",
+						"Filling - Amalgam",
+						"Composite Veneer",
+						"Ceramic Crown",
+						"Partial Denture, Acrylic Frame",
+						"Partial Denture, Metal Frame",
+						"Invisalign",
+						"Post and core",
+						"Root Canal Treatment",
+						"Root Planning",
+						"Normal Tooth Extraction",
+						"Simple Surgical Removal (molar, tooth root, impacted tooth)"
+					]
+				}		
+			];
+
 
 			var my_json = JSON.stringify(list_data);
 			var json_data = JSON.parse(my_json);
-			var htmlData;
-			var htmlSortRating;
-			var htmlSortAlpha;
-			var htmlSortTotalServices;
+			var htmlData = "";
+			var htmlSortRating = "";
+			var htmlSortAlpha = "";
+			var htmlSortTotalServices = "";
 
 			//append data
 
 			var sortbyRating = json_data.sort(sortRating);
 			for(var key in sortbyRating){
 				htmlData += '<ul class="list-styled">';
-				htmlData += '<li>'+sortbyRating[key].name+ '<br>Rating :' + sortbyRating[key].rating + '<br>Total Service: ' + sortbyRating[key].services_in_clinic.length +'</li>';
+				htmlData += '<li>'+ '<strong>'+sortbyRating[key].name+ '</strong>' + '<br>Rating :' + sortbyRating[key].rating + '<br>Total Service: ' + sortbyRating[key].services_in_clinic.length +'</li>';
 				htmlData += '</ul>';
 			}
 
@@ -571,10 +574,9 @@
 				var selected = $(this).val();
 				if ( selected == '1' ) {
 					var sortbyRating1 = json_data.sort(sortRating);
-					console.log(sortbyRating1);
 					for(var key in sortbyRating1){
 						htmlSortRating += '<ul class="list-styled">';
-						htmlSortRating += '<li>'+sortbyRating1[key].name+ '<br>Rating :' + sortbyRating1[key].rating + '<br>Total Service: '+ sortbyRating1[key].services_in_clinic.length +'</li>';
+						htmlSortRating += '<li>'+ '<strong>' +sortbyRating1[key].name+ '</strong>' + '<br>Rating :' + sortbyRating1[key].rating + '<br>Total Service: '+ sortbyRating1[key].services_in_clinic.length +'</li>';
 						htmlSortRating += '</ul>';
 					}
 					$('.main').html(htmlSortRating);
@@ -583,7 +585,7 @@
 					var sortAlphabetical1 = json_data.sort(sortAlphabetical);
 					for(var key in sortAlphabetical1){
 						htmlSortTotalServices += '<ul class="list-styled">';
-						htmlSortTotalServices += '<li>'+sortAlphabetical1[key].name+ '<br>Rating :' + sortAlphabetical1[key].rating + '<br>Total Service: ' + sortAlphabetical1[key].services_in_clinic.length + '</li>';
+						htmlSortTotalServices += '<li>' + '<strong>' +sortAlphabetical1[key].name+ '</strong>' + '<br>Rating :' + sortAlphabetical1[key].rating + '<br>Total Service: ' + sortAlphabetical1[key].services_in_clinic.length + '</li>';
 						htmlSortTotalServices += '</ul>';
 					}
 					$('.main').html(htmlSortTotalServices);
@@ -593,7 +595,7 @@
 					var sortNumberofServices1 = json_data.sort(sortNumberofServices);
 					for(var key in sortNumberofServices1){
 						htmlSortAlpha += '<ul class="list-styled">';
-						htmlSortAlpha += '<li>'+sortNumberofServices1[key].name+ '<br>Rating :' + sortNumberofServices1[key].rating + '<br>Total Service: ' + sortNumberofServices1[key].services_in_clinic.length + '</li>';
+						htmlSortAlpha += '<li>'+ '<strong>' +sortNumberofServices1[key].name+ '</strong>' + '<br>Rating :' + sortNumberofServices1[key].rating + '<br>Total Service: ' + sortNumberofServices1[key].services_in_clinic.length + '</li>';
 						htmlSortAlpha += '</ul>';
 					}
 					$('.main').html(htmlSortAlpha);
