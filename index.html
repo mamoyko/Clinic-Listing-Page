@@ -12,12 +12,29 @@
 				<h1>Clinic Listing Page</h1>
 			</div>
 		</div>
+		<div class="container">
+			<div class="col-md-4 col-md-offset-4">
+				<div class="form-group">
+					<label for="">Clinic Listing Page</label>
+					<select name="" id="sortList" class="form-control">
+						<option value="0">-- Sort --</option>
+						<option value="1">Rating</option>
+						<option value="2">Alphabetical</option>
+						<option value="3">Number of Services</option>
+					</select>
+				</div>
+			</div>
+		</div>
 	</header>
 	<div class="container">
 		<div class="col-md-12">
-			
+			<div class="main"></div>
 		</div>
 	</div>
+	<script
+	  src="https://code.jquery.com/jquery-2.2.4.min.js"
+	  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+	  crossorigin="anonymous"></script>
 	<script>
 		var list_data = [
 			{
@@ -89,7 +106,7 @@
 				]
 			},
 			{
-				"name" : "Bangkok Smile Dental Clinic Sukhumvit ",
+				"name" : "Bangkok Smile Dental Clinic Sukhumvit",
 				"rating" : "4.2",
 				"location" : {
 					"lat" : 13.7422855,
@@ -387,29 +404,6 @@
 				]
 			},
 			{
-				"name" : "Dr. Sunil International Dental Center",
-				"rating" : "4.7",
-				"location" : {
-					"lat" : 13.7260492,
-					"lng" : 100.6063923
-				},
-				"isValid" : true,
-				"services_in_clinic" : [
-					"Porcelain Crown",
-					"Dental Implant (per tooth)",
-					"Full Dentures (Acrylic) per Jaw",
-					"Teeth Whiterning In office ZOOM",
-					"Teeth Whitening Home Bleaching (3 syringes)",
-					"Check up",
-					"Xray OPG (Panoramic)",
-					"Cleaning",
-					"Dental Bridges",
-					"Porcelain Veneer",
-					"Filling - Amalgam",
-					"Root Canal Treatment"
-				]
-			},
-			{
 				"name" : "The Arch International Dental Center",
 				"rating" : "4.7",
 				"location" : {
@@ -548,26 +542,92 @@
 					"Simple Surgical Removal (molar, tooth root, impacted tooth)"
 				]
 			}		
-		];
+		]
 
 
 		$(function(){
 
+
 			var my_json = JSON.stringify(list_data);
 			var json_data = JSON.parse(my_json);
-			var filtered_json = find_in_object(json_data, {"rating": "4.5"});
+			var htmlData;
+			var htmlSortRating;
+			var htmlSortAlpha;
+			var htmlSortTotalServices;
 
-			function find_in_object(my_object, my_criteria){
+			//append data
 
-			  return my_object.filter(function(obj) {
-			    return Object.keys(my_criteria).every(function(c) {
-			      return obj[c] == my_criteria[c];
-			    });
-			  });
+			var sortbyRating = json_data.sort(sortRating);
+			for(var key in sortbyRating){
+				htmlData += '<ul class="list-styled">';
+				htmlData += '<li>'+sortbyRating[key].name+ '<br>Rating :' + sortbyRating[key].rating + '<br>Total Service: ' + sortbyRating[key].services_in_clinic.length +'</li>';
+				htmlData += '</ul>';
+			}
+
+			$('.main').append(htmlData);
+
+
+			$("#sortList").change(function(){
+				var selected = $(this).val();
+				if ( selected == '1' ) {
+					var sortbyRating1 = json_data.sort(sortRating);
+					console.log(sortbyRating1);
+					for(var key in sortbyRating1){
+						htmlSortRating += '<ul class="list-styled">';
+						htmlSortRating += '<li>'+sortbyRating1[key].name+ '<br>Rating :' + sortbyRating1[key].rating + '<br>Total Service: '+ sortbyRating1[key].services_in_clinic.length +'</li>';
+						htmlSortRating += '</ul>';
+					}
+					$('.main').html(htmlSortRating);
+
+				} else if ( selected == '2' ) {
+					var sortAlphabetical1 = json_data.sort(sortAlphabetical);
+					for(var key in sortAlphabetical1){
+						htmlSortTotalServices += '<ul class="list-styled">';
+						htmlSortTotalServices += '<li>'+sortAlphabetical1[key].name+ '<br>Rating :' + sortAlphabetical1[key].rating + '<br>Total Service: ' + sortAlphabetical1[key].services_in_clinic.length + '</li>';
+						htmlSortTotalServices += '</ul>';
+					}
+					$('.main').html(htmlSortTotalServices);
+
+				} else if ( selected == '3' ) {
+					//sortNumberofServices();
+					var sortNumberofServices1 = json_data.sort(sortNumberofServices);
+					for(var key in sortNumberofServices1){
+						htmlSortAlpha += '<ul class="list-styled">';
+						htmlSortAlpha += '<li>'+sortNumberofServices1[key].name+ '<br>Rating :' + sortNumberofServices1[key].rating + '<br>Total Service: ' + sortNumberofServices1[key].services_in_clinic.length + '</li>';
+						htmlSortAlpha += '</ul>';
+					}
+					$('.main').html(htmlSortAlpha);
+				}
+			});
+
+			function sortRating(a,b){
+
+				var newvar = parseFloat(a.rating);
+				var newvar1 = parseFloat(b.rating); 
+				return newvar1 - newvar;
+			}
+
+			function sortAlphabetical(a, b){
+
+				var x = a.name.toLowerCase();
+				var y = b.name.toLowerCase();
+				if (x < y)
+				 return -1;
+				if (x > y)
+				 return 1;
+				return 0;
+			
+			}
+
+			function sortNumberofServices(a,b){
+					
+				var newvar = a.services_in_clinic.length
+				var newvar1 = b.services_in_clinic.length 
+				return newvar1 - newvar;
 
 			}
 
-		});
+		 });
 
 	</script>
 </body>
